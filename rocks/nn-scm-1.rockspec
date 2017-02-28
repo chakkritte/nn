@@ -2,14 +2,14 @@ package = "nn"
 version = "scm-1"
 
 source = {
-   url = "git://github.com/torch/nn.git",
+   url = "git://github.com/chakkritte/nn.git",
 }
 
 description = {
    summary = "Neural Network package for Torch",
    detailed = [[
    ]],
-   homepage = "https://github.com/torch/nn",
+   homepage = "https://github.com/chakkritte/nn",
    license = "BSD"
 }
 

@@ -11,7 +11,7 @@ function CELU:__init(nInputDims,alpha, inplace)
    concatTable:add(nn.Identity())
    concatTable:add(nn.MulConstant(-1))
    self:add(concatTable)
-   self:add(nn.JoinTable(2))
+   self:add(nn.JoinTable(1))
    self:add(nn.ELU(self.alpha,self.inplace))
 end
 

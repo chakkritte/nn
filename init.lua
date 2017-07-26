@@ -6,9 +6,6 @@ require('nn.THNN')
 
 require('nn.utils')
 
-require('nn.Swapout')
-require('nn.CELU')
-
 require('nn.ErrorMessages')
 require('nn.Module')
 
@@ -221,6 +218,10 @@ require('nn.Jacobian')
 require('nn.SparseJacobian')
 require('nn.hessian')
 require('nn.test')
+
+
+require('nn.Swapout')
+require('nn.CELU')
 
 
 return nn

@@ -7,17 +7,13 @@ function CELU:__init(nInputDims,alpha, inplace)
    assert(type(self.alpha) == 'number')
    self.inplace = inplace or false
 
-   --local concatTable = nn.ConcatTable()
-   --concatTable:add(nn.Identity())
-   --concatTable:add(nn.MulConstant(-1))
-   --self:add(concatTable)
-   --self:add(nn.JoinTable(1))
-   
-   local concatTable = nn.Concat(2)
+   local concatTable = nn.ConcatTable()
    concatTable:add(nn.Identity())
    concatTable:add(nn.MulConstant(-1))
    self:add(concatTable)
+   self:add(nn.JoinTable(2))
    self:add(nn.ELU(self.alpha,self.inplace))
+   
 end
 
 function CELU:updateOutput(input)
